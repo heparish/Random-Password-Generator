@@ -40,10 +40,17 @@ function prompts() {
   var numbs = confirm("Would you like numbers included?");
   var symbols = confirm("Would you like symbols included?");
 
+let password = '';
+
   if (lowerCase === true)
      (upperCase === true)
      (numbs === true)
      (symbols === true) 
+
+	 console.log(lowerCase);
+	 console.log(upperCase);
+	 console.log(numbs);
+	 console.log(symbols);
 
 
   var options = {
@@ -64,6 +71,16 @@ function prompts() {
       var length = passwordMath(blah)
       finalPass.push(length)
     }
+
+	if(lowerCase === true && upperCase === true && symbols === true && numbs === true){
+		for(var i=0; i <length; i++){
+
+			charPick = lowerCase[Math.floor(Math.random()*lowerCase.length)];
+			console.log(charPick)
+			password = password.toString()+charPick.toString();
+			console.log(password);
+		}
+	}
 
     if (actualPass.lowerCase) {
       blah = blah.concat(lowerCase)
