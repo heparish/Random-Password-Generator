@@ -79,4 +79,4 @@ function generatePassword() {
 	}
 	return password;
 }
-//I can't make it appear in the box sorry
+//I can't make it appear in the box sorry.
