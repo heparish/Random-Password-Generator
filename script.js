@@ -5,6 +5,19 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var generateBtn = document.querySelector("#generate");
 var passwordLength = 0
 
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+
+    for (var i = 0; i = actualChar; i++) {
+      finalPass.join()
+    }
+  }
+
+generateBtn.addEventListener("click", writePassword);
+
 function passwordMath(array) {
   var random = Math.floor(Math.random() * array.length)
   var randomChar = array[random]
@@ -71,19 +84,9 @@ function prompts() {
       blah = blah.concat(symbols)
       actualChar.push(passwordMath(blah))
     }
+	return password
   }
  
   //I am completely unable to figure out how to get the password to show up in the box
 
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-
-    for (var i = 0; i = actualChar; i++) {
-      finalPass.join()
-    }
-  }
-
-  generateBtn.addEventListener("click", writePassword);
+  
