@@ -35,7 +35,7 @@ function prompts() {
     numbers === null && numbers == "no" &&
     symbols === null && symbols == "no") {
     alert("Must select charatcter type")
-    return;
+    return prompts;
   }
 }
 
@@ -46,8 +46,6 @@ function prompts() {
     numbers: numbers,
     symbols: symbols,
   }
-  console.log(options)
-  return options
 
   function generatePassword() {
     var actualPass = prompts()
