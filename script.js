@@ -25,18 +25,15 @@ function prompts() {
     }
   
 
-  var lowerCase = prompt("Would you like lower case included? Write yes or no in the space below.");
-  var upperCase = prompt("Would you like upper case included? Write yes or no in the space below.");
-  var numbers = prompt("Would you like numbers included? Write yes or no in the space below.");
-  var symbols = prompt("Would you like symbols included? Write yes or no in the space below.");
+  var lowerCase = confirm("Would you like lower case included?");
+  var upperCase = confirm("Would you like upper case included?");
+  var numbers = confirm("Would you like numbers included?");
+  var symbols = confirm("Would you like symbols included?");
 
-  if (lowerCase === null && lowerCase == "no" &&
-    upperCase === null && upperCase == "no" &&
-    numbers === null && numbers == "no" &&
-    symbols === null && symbols == "no") {
-    alert("Must select charatcter type")
-    return prompts;
-  }
+  if (lowerCase === true)
+     (upperCase === true)
+     (numbers === true )
+     (symbols === true) 
 }
 
   var options = {
@@ -90,6 +87,8 @@ function prompts() {
 
     for (var i = 0; i = actualChar; i++) {
       var length = passwordMath(blah)
-      finalPass.push()
+      finalPass.join()
     }
   }
+
+  generateBtn.addEventListener("click", writePassword);
