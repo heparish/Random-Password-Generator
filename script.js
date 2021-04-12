@@ -10,12 +10,7 @@ function writePassword() {
 	var passwordText = document.querySelector("#password");
   
 	passwordText.value = password;
-  
   }
-//    for (var i = 0; i = actualChar; i++) {
-//     finalPass.join()
-//    }
-// }
 
 generateBtn.addEventListener("click", writePassword);
 
@@ -36,29 +31,52 @@ function generatePassword() {
       passwordLength = prompt("Sorry this is not an eligable number between 8 and 128, select again")
     } 
 
-  var lowerCase = confirm("Would you like lower case included?");
-  var upperCase = confirm("Would you like upper case included?");
-  var numbs = confirm("Would you like numbers included?");
-  var symbols = confirm("Would you like symbols included?");
+  var lowerCasePrompt = confirm("Would you like lower case included?");
+  var upperCasePrompt = confirm("Would you like upper case included?");
+  var numbsPrompt = confirm("Would you like numbers included?");
+  var symbolsPrompt = confirm("Would you like symbols included?");
 
   let password = '';
 
- /* if (lowerCase === true)
-     (upperCase === true)
-     (numbs === true)
-     (symbols === true) 
-*/
-	 console.log(lowerCase);
-	 console.log(upperCase);
-	 console.log(numbs);
-	 console.log(symbols);
+     console.log(passwordLength);
+	 console.log(lowerCasePrompt);
+	 console.log(upperCasePrompt);
+	 console.log(numbsPrompt);
+	 console.log(symbolsPrompt);
 
 //if all selected
-	 if(lowerCase === true && upperCase === true && symbols === true && numbs === true){
+	 if(lowerCasePrompt === true && upperCasePrompt === true && symbolsPrompt === true && numbsPrompt === true){
 		for(var i=0; i <length; i++){
-			passwordMath
+			charPick = passwordMath;
+      		console.log(charPick);
+     		password = password.toString()+charPick.toString();
+      		console.log(password);
 		}
-		
+	}
+//no lower case
+	else if(lowerCasePrompt != true && upperCasePrompt === true && symbolsPrompt === true && numbsPrompt === true){
+		for(var i = 0; i <length; i++){
+		passwordMath
+	  }
+	}
+//no upper case
+	else if(lowerCasePrompt === true && upperCasePrompt != true && symbolsPrompt === true && numbsPrompt === true){
+		for(var i = 0; i <length; i++){
+		passwordMath
+	  }
+	}
+//no symbols
+	else if(lowerCasePrompt === true && upperCasePrompt === true && symbolsPrompt != true && numbsPrompt === true){
+		for(var i = 0; i <length; i++){
+		passwordMath
+	  }
+	}
+//no numbers
+	else if(lowerCasePrompt === true && upperCasePrompt === true && symbolsPrompt === true && numbsPrompt != true){
+		for(var i = 0; i <length; i++){
+		passwordMath
+	  }
 	}
 	return password;
 }
+//I can't make it appear in the box sorry
