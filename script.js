@@ -6,15 +6,16 @@ var generateBtn = document.querySelector("#generate");
 var passwordLength = 0
 
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-
-    for (var i = 0; i = actualChar; i++) {
-      finalPass.join()
-    }
+	var password = generatePassword();
+	var passwordText = document.querySelector("#password");
+  
+	passwordText.value = password;
+  
   }
+//    for (var i = 0; i = actualChar; i++) {
+//     finalPass.join()
+//    }
+// }
 
 generateBtn.addEventListener("click", writePassword);
 
@@ -24,10 +25,10 @@ function passwordMath(array) {
   return randomChar;
 }
 
-function prompts() {
+function generatePassword() {
 
   while (passwordLength < 8 || passwordLength > 128) {
-    passwordLength = prompt("Chose a pawword length between 8 and 128 variables.")
+    passwordLength = prompt("Chose a password length between 8 and 128 variables.")
   }
     if (passwordLength < 8 || passwordLength > 128) {
       passwordLength = prompt("Sorry this is not an eligable numbers, chose another number between 8 and 128.")
@@ -40,70 +41,24 @@ function prompts() {
   var numbs = confirm("Would you like numbers included?");
   var symbols = confirm("Would you like symbols included?");
 
-let password = '';
+  let password = '';
 
-  if (lowerCase === true)
+ /* if (lowerCase === true)
      (upperCase === true)
      (numbs === true)
      (symbols === true) 
-
+*/
 	 console.log(lowerCase);
 	 console.log(upperCase);
 	 console.log(numbs);
 	 console.log(symbols);
 
-
-  var options = {
-    passwordLength: passwordLength,
-    lowerCase: lowerCase,
-    upperCase: upperCase,
-    numbs: numbs,
-    symbols: symbols,
-  }
-}
-  function generatePassword() {
-    var actualPass = prompts()
-    var finalPass = []
-    var blah = options
-    var actualChar = []
-
-    for (var i = 0; i < actualPass.length; i++) {
-      var length = passwordMath(blah)
-      finalPass.push(length)
-    }
-
-	if(lowerCase === true && upperCase === true && symbols === true && numbs === true){
+//if all selected
+	 if(lowerCase === true && upperCase === true && symbols === true && numbs === true){
 		for(var i=0; i <length; i++){
-
-			charPick = lowerCase[Math.floor(Math.random()*lowerCase.length)];
-			console.log(charPick)
-			password = password.toString()+charPick.toString();
-			console.log(password);
+			passwordMath
 		}
+		
 	}
-
-    if (actualPass.lowerCase) {
-      blah = blah.concat(lowerCase)
-      actualChar.push(passwordMath(blah))
-    }
-
-    if (actualPass.upperCase) {
-      blah = blah.concat(upperCase)
-      actualChar.push(passwordMath(blah))
-    }
-
-    if (actualPass.numbs) {
-      blah = blah.concat(numbs)
-      actualChar.push(passwordMath(blah))
-    }
-
-    if (actualPass.symbols) {
-      blah = blah.concat(symbols)
-      actualChar.push(passwordMath(blah))
-    }
-	return password
-  }
- 
-  //I am completely unable to figure out how to get the password to show up in the box
-
-  
+	return password;
+}
